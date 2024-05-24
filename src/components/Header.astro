@@ -1,0 +1,24 @@
+---
+// src/components/Header.astro
+import { SITE_TITLE } from '../consts';
+
+---
+
+<header class="py-4 px-4  bg-[#F9F9FA] rounded-2xl w-[96%] max-w-[820px]  mx-auto mt-12">
+    <div class="flex gap-4 items-end mb-4">
+        <h1 class="text-2xl md:text-3xl tracking-tight font-bold ">
+            <a href="/" class="text-dark flex flex-col">
+    
+            <span>Roy</span><span>Sandoval</span></a>
+        </h1>
+        <nav class="flex justify-center mt-4 text-lg font-radio">
+            <a href={Astro.url.pathname === '/' ? '/about' : '/'} class="mx-2 text-primary underline">
+                {Astro.url.pathname === '/' ? 'About' : 'Go to Home/Writings'}
+            </a>    
+        </nav>
+    </div>
+
+  <p class="text-dark text-xl">Building <a href="#" class="text-primary underline text-lg">Woosh</a> with the goal of helping crypto get 100,000,000 users in LatAm.</p>
+
+
+</header>
